@@ -18,7 +18,7 @@ import platform
 from setuptools import setup, Extension
 import sys
 
-version = '0.2.10'
+version = '0.2.11'
 
 # From https://github.com/pandas-dev/pandas/pull/24274:
 # For mac, ensure extensions are built for macos 10.9 when compiling on a
