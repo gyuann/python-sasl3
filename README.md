@@ -4,7 +4,7 @@ Python wrapper for Cyrus SASL
 
 ## how `sasl3` is different from `sasl` package? 
 
-This is a fork from original work from Cloudera's package (sasl)[https://github.com/cloudera/python-sasl] package. 
+This is a fork from original work from Cloudera's package [sasl](https://github.com/cloudera/python-sasl) package. 
 
 Original package wasn't maintained and had issue wth latest Python 3 releases, and also had runtime issues running 
 on RHEL6. Python `sasl3` package solves these issues.
