@@ -37,12 +37,18 @@ sasl_module = Extension('sasl.saslwrapper',
                         include_dirs=["sasl"],
                         libraries=["sasl2"],
                         language="c++")
+
+with open("README.md", "r") as fh:
+    long_description = fh.read()
+
 setup(name='sasl3',
       version='0.2.7',
       url="http://github.com/sparkur/python-sasl3",
       maintainer="Ruslan Dautkhanov",
       maintainer_email="dautkhanov@gmail.com",
       description="""Cyrus-SASL bindings for Python""",
+      long_description=long_description,
+      long_description_content_type="text/markdown",
       classifiers=[
         'Programming Language :: Python :: 3',
         'Development Status :: 5 - Production/Stable',
