@@ -18,7 +18,7 @@ import platform
 from setuptools import setup, Extension
 import sys
 
-version = '0.2.9'
+version = '0.2.10'
 
 # From https://github.com/pandas-dev/pandas/pull/24274:
 # For mac, ensure extensions are built for macos 10.9 when compiling on a
@@ -40,8 +40,9 @@ sasl_module = Extension('sasl.saslwrapper',
                         libraries=["sasl2"],
                         language="c++")
 
-with open("README.md", "r") as fh:
-    long_description = fh.read()
+try:
+    with open("README.md", "r") as fh:
+        long_description = fh.read()
 except FileNotFoundError:
     long_description = ''
 
