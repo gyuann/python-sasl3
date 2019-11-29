@@ -18,6 +18,8 @@ import platform
 from setuptools import setup, Extension
 import sys
 
+version = '0.2.8'
+
 # From https://github.com/pandas-dev/pandas/pull/24274:
 # For mac, ensure extensions are built for macos 10.9 when compiling on a
 # 10.9 system or above, overriding distuitls behaviour which is to target
@@ -42,7 +44,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(name='sasl3',
-      version='0.2.8',
+      version=version,
       url="http://github.com/sparkur/python-sasl3",
       maintainer="Ruslan Dautkhanov",
       maintainer_email="dautkhanov@gmail.com",
@@ -62,7 +64,7 @@ setup(name='sasl3',
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
       ],
-      download_url="https://github.com/sparkur/python-sasl3/archive/v0.2.8.tar.gz",
+      download_url="https://github.com/sparkur/python-sasl3/archive/v{}.tar.gz".format(version),
       packages=['sasl'],
       install_requires=['six'],
       ext_modules=[sasl_module],
