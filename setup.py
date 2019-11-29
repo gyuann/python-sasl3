@@ -18,7 +18,7 @@ import platform
 from setuptools import setup, Extension
 import sys
 
-version = '0.2.8'
+version = '0.2.9'
 
 # From https://github.com/pandas-dev/pandas/pull/24274:
 # For mac, ensure extensions are built for macos 10.9 when compiling on a
@@ -42,6 +42,9 @@ sasl_module = Extension('sasl.saslwrapper',
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
+except FileNotFoundError:
+    long_description = ''
+
 
 setup(name='sasl3',
       version=version,
