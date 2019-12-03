@@ -9,6 +9,9 @@ This is a fork from original work from Cloudera's package [sasl](https://github.
 Original package wasn't maintained and had issue wth latest Python 3 releases, and also had runtime issues running 
 on RHEL6. Python `sasl3` package solves these issues.
 
+Other than that, it's a drop-in replacement for original `sasl` package - no changes to your Python code is necessary, 
+including the name of the imported package - still stays just `sasl` (and not `sasl3` as the name of the pypi repo). 
+
 ## External dependencies
 
 You need following external packages installed on the system to pip-install `sasl3` :
